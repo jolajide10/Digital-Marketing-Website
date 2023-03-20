@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top profitable digital marketing skills to boost your income</title>
+    <link
+      rel="shortcut icon"
+      href="webimages/DM logo.PNG"
+      type="image/x-icon"
+    />
+
+    <!-- ----linked font awesome cdn---- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ----linked style.css file---- -->
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ----linked media.css file---- -->
+    <link rel="stylesheet" href="./public/css/media.css" />
+  </head>
+  <body>
+    <!-- ====markup header element==== -->
+    <header class="header">
+      <!-- ---header logo--- -->
+      <div class="header-logo">
+        <img src="webimages/DM logo.PNG" alt="logo" />
+      </div>
+
+      <!-- ---navigation--- -->
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="jamindex.html">home</a>
+          </li>
+          <li>
+            <a href="About.html">about</a>
+          </li>
+          <li>
+            <a  href="Courses.html">courses</a>
+          </li>
+          <li>
+            <a href="#contact">contact</a>
+          </li>
+          <li>
+            <a class= "active" href="Newsletter.html">Newsletter</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ---menu bar--- -->
+      <div id="menu-bar" class="fas fa-bars"></div>
+    </header>
+
+    <section id="heroin">
+        
+        <h2>/ Newsletter /</h2>
+        <h1>Suscribe to get new insights<br> on Digital Marketing<br></h1>
+        <h4>Comptuting and Entrepreneurship updates<br><br></h4>
+<form name="submit-to-google-sheet">
+    <input type="email" name="Email" placeholder="Your email id" required>
+    <button type="submit"><img src="webimages/send icon.png" width="30px"></button>
+</form>
+
+<span id="msg"></span>
+
+      </section>
+
+        <!-- ====markup footer element==== -->
+        <footer class="footer">
+          <div class="contact-info">
+            <span id="contact">
+            <h4>contact info</h4></span>
+            <p>
+              <i class="fas fa-location-dot"></i
+              ><span>Lagos, Nigeria.</span>
+            </p>
+            <p><i class="fas fa-envelope"></i> <span>jolajide10@gmail.com</span></p>
+            <p><i class="fas fa-phone"></i> <span>+234 8155110254</span></p>
+    
+          </div>
+    
+          <div class="location">
+            <h4>follow us</h4>
+            <ul>
+
+                  <li>
+                    <a href="https://www.instagram.com/digitalmarketing_skills/" target="blank">instagram</a>
+
+                  <li>
+                    <a href="https://www.quora.com/profile/DigitalMarketingSkills-1" target="blank">Quora</a>
+                  </li>
+                  <li>
+                    <a href="https://www.reddit.com" target="blank">Reddit</a>
+                  </li>
+                  <li>
+                    <a href="https://www.pinterest.com/settings#profile" target="blank">Pinterest</a>
+                  </li>
+            </ul>
+          </div>
+    
+          <div class="quick-links">
+            <h4>quick links</h4>
+            <ul>
+              <li><a href="jamindex.html">home</a></li>
+              <li><a href="About.html">about</a></li>
+              <li><a href="Courses.html">courses</a></li>
+              <li><a href="#contact">contact</a></li>
+              <li><a href="Newsletter.html">Newsletter</a></li>
+
+            </ul>
+          </div>
+    
+          <div class="follow-us">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="https://iide.co/blog/top-5-skills-for-students-to-make-real-money/">iide.co</a></li>
+              <li><a href="https://www.ziprecruiter.com/">ZipRecruiter.com</a></li>
+              <li><a href="https://ng.indeed.com/?r=us">indeed.com</a></li>
+              <li><a href="https://www.glassdoor.com/index.htm">glassdoor.com</a></li>
+            </ul>
+          </div>
+    
+    
+          <div class="copyright">
+            <p>Copyright 2022 || &copy all right reserved. Website made by Olajide Jamal</p>
+          </div>
+        </footer>
+
+<!----EMAIL LISITING-->
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx5McH3M5XhAF2aZjlwUBVsddcDF__4RRS0zZkCCdaHd32AYlLR6Npz6WH5U565qu7d/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Thank You For Subscribing!"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+
+                <!-- ----linked main.js file---- -->
+                <script src="./public/js/main.js"></script>
+      </body>
+</html>
